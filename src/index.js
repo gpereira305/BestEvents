@@ -3,16 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app/layout/App'; 
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { configureStore } from './app/layout/store/configureStore';
 
 
+
+const store = configureStore();
 
 
 
 
 ReactDOM.render(
-  <BrowserRouter>
+ 
+     <Provider store={store}>
+        <BrowserRouter>
           <App />
-  </BrowserRouter>,
+         </BrowserRouter>
+     </Provider>,
+
+
+
   document.getElementById('root')
 );
  
