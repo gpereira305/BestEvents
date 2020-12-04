@@ -5,6 +5,7 @@ import App from './app/layout/App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from './app/layout/store/configureStore';
+import ScrollToTop from './app/common/util/ScrollToTop';
 
 
 
@@ -17,7 +18,9 @@ ReactDOM.render(
  
      <Provider store={store}>
         <BrowserRouter>
-          <App />
+          <ScrollToTop>
+                 <App />
+          </ScrollToTop>
          </BrowserRouter>
      </Provider>,
 
