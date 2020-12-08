@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Grid, Icon, Segment } from 'semantic-ui-react'
+import { Grid, Icon, Segment } from 'semantic-ui-react'
 
 
 
@@ -37,7 +37,7 @@ const EventDetailedInfo = ({event}) => {
                      <span>{event.venue}</span>
                    </Grid.Column>
                    <Grid.Column width={4}>
-                     <Button color="teal" size="tiny" content="Show Map" />
+                     {/* <Button color="teal" size="tiny" content="Show Map" /> */}
                    </Grid.Column>
                  </Grid>
                </Segment>
