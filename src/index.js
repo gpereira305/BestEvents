@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 import './index.css';
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
 import App from './app/layout/App'; 
@@ -15,9 +15,9 @@ import ScrollToTop from './app/common/util/ScrollToTop';
 const store = configureStore(); 
 
 
-
-
-ReactDOM.render(
+store.firebaseAuthIsReady.then(() => {
+  //eslint-disable-next-line
+  ReactDOM.render(
  
      <Provider store={store}>
         <BrowserRouter>
@@ -36,4 +36,8 @@ ReactDOM.render(
 
   document.getElementById('root')
 );
+})
+
+ 
+
  
